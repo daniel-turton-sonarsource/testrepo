@@ -5,6 +5,12 @@ on:
       - master
   pull_request:
     types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: false
+        default: 'Mona the Octocat'
 jobs:
   sonarcloud:
     name: SonarCloud
